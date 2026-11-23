@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Alunos</title>
+</head>
+
+<body>
+
+    <h1>Lista de Alunos</h1>
+
+    <ul>
+        {% for aluno in alunos %}
+
+        <li>
+            Nome: {{ aluno.nome }} <br>
+            Idade: {{ aluno.idade }} <br>
+            Matrícula: {{ aluno.matricula }} <br>
+            CPF: {{ aluno.cpf }}
+        </li>
+
+        <hr>
+
+        {% empty %}
+        <li>Nenhum aluno cadastrado.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'cadastrar_alunos' %}">
+        Cadastrar novo aluno
+    </a>
+
+</body>
+
+</html>

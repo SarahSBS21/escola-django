@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Professores</title>
+</head>
+
+<body>
+
+    <h1>Lista de Professores</h1>
+
+    <ul>
+        {% for professor in professores %}
+
+        <li>
+            Nome: {{ professor.nome }} <br>
+            Disciplina: {{ professor.disciplina }} <br>
+            Email: {{ professor.email }} <br>
+            Telefone: {{ professor.telefone }}
+        </li>
+
+        <hr>
+
+        {% empty %}
+        <li>Nenhum professor cadastrado.</li>
+
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'cadastrar_professor' %}">
+        Cadastrar novo professor
+    </a>
+
+</body>
+
+</html>
