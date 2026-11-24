@@ -26,8 +26,7 @@ def cadastrar(request):
         )
 
         aluno.save()
-
-        return redirect('listar_alunos')
+ 
 
     return render(request, 'alunos/cadastrar.html')
 
@@ -41,3 +40,6 @@ def listar(request):
         'alunos/listar.html',
         {'alunos': alunos}
     )
+def inicio(request):
+
+    return render(request, 'alunos/inicio.html')

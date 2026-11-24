@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Escolar</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f5f8;
+            margin: 0;
+        }
+
+        header {
+            background-color: #243b55;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        main {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 15px;
+        }
+
+        .menu {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #243b55;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #243b55;
+            color: white;
+            padding: 12px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: #41678c;
+        }
+
+        footer {
+            text-align: center;
+            color: #555;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistema Escolar</h1>
+        <p>Bem-vindo ao sistema de gerenciamento escolar!</p>
+    </header>
+
+    <main>
+
+        <div class="menu">
+            <h2>Alunos</h2>
+
+            <a href="/cadastrar/">Cadastrar aluno</a>
+            <a href="/listar/">Listar alunos</a>
+        </div>
+
+        <div class="menu">
+            <h2>Professores</h2>
+
+            <a href="/professor/cadastrar/">Cadastrar professor</a>
+            <a href="/professor/listar/">Listar professores</a>
+        </div>
+
+        <div class="menu">
+            <h2>Livros</h2>
+
+            <a href="/livros/cadastrar/">Cadastrar livro</a>
+            <a href="/livros/listar/">Listar livros</a>
+        </div>
+
+        <div class="menu">
+            <h2>Administração</h2>
+
+            <a href="/admin/">Painel administrativo</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Sistema Escolar - Desenvolvido com Django</p>
+    </footer>
+
+</body>
+</html>
